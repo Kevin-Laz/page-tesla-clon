@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.astro';
+import HelpIcon from '../components/HepIcon.astro';
+import PersonIcon from '../components/PersonIcon.astro';
+import GloboIcon from '../components/GloboIcon.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<header class="flex justify-between h-24 items-center px-10 fixed top-0 w-screen z-40 text-white">
+			<div>
+				<Logo />
+			</div>
+			<nav>
+				<ul class="flex text-sm">
+					<li class="px-4 py-1 font-medium hover:bg-zinc-100 hover:text-black rounded"><a href="#">Vehículos</a></li>
+					<li class="px-4 py-1 font-medium hover:bg-zinc-100 hover:text-black rounded"><a href="#">Energía</a></li>
+					<li class="px-4 py-1 font-medium hover:bg-zinc-100 hover:text-black rounded"><a href="#">Carga</a></li>
+					<li class="px-4 py-1 font-medium hover:bg-zinc-100 hover:text-black rounded"><a href="#">Descubrir</a></li>
+					<li class="px-4 py-1 font-medium hover:bg-zinc-100 hover:text-black rounded"><a href="#">Tienda</a></li>
+				</ul>
+			</nav>
+			
+			<div class="flex gap-3">
+				<HelpIcon/>
+
+				<GloboIcon/>
+
+				<PersonIcon/>
+
+			</div>
+			
+		</header>
+		<section class="bg-zinc-200 h-screen w-screen text-center overflow-hidden z-10 flex flex-col justify-between pb-10 items-center">
+			<header class="z-20 relative">
+				<h2 class="text-white text-4xl font-medium pt-28">Disfrute de Tesla</h2>
+				<p class="text-white text-sm font-medium underline underline-offset-4">
+					<a href="#">Programe una prueba de conduccion hoy mismo</a>
+				</p>
+			</header>
+			<footer class="relative z-20 flex flex-wrap justify-center">
+				<a class="bg-white/[.8] px-9 py-2.5 rounded text-sm h-max w-64 m-3" href="#">Prueba de conducción</a>
+				<a class="bg-[#222222]/[.8] text-white px-9 py-2.5 rounded text-sm h-max w-64 m-3" href="#">Pedido personalizado</a>
+			</footer>
+			
+			<div class="absolute top-0 bottom-0 h-full w-full">
+				<video class="object-center object-cover h-full w-full" autoplay loop src="/tesla.mp4"></video>
+			</div>
+			
+		</section>
+		
+	</main>
+</Layout>
+
+
